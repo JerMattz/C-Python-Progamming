@@ -15,10 +15,10 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
-struct Node* reverseList(struct Node* head) {
+Node* reverseList(struct Node* head) {
 
     // Initialize three pointers: curr, prev and next
-    struct Node *curr = head, *prev = NULL, *next;
+    Node *curr = head, *prev = NULL, *next;
 
     // Traverse all the nodes of Linked List
     while (curr != NULL) {
