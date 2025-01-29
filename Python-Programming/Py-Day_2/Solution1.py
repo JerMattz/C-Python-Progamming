@@ -3,18 +3,18 @@
 
 def calculate(x, y, operation):
     if operation == "add" or "+":
-        return(x + y)
+        return x + y
     elif operation == "subtract" or "-":
-        return(x - y)
+        return x - y
     elif operation == "multiply" or "*":
-        return(x * y)
+        return x * y
     elif operation == "divide" or "/":
         if y != 0:
-            return(x / y)
+            return x / y
         else:
-            return("Denominator cannot be zero")
+            return "Denominator cannot be zero"
     else:
-        return("Invalid operation")
+        return "Invalid operation"
 
 # print("imported")
 
