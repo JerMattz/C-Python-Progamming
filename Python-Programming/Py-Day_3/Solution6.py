@@ -20,4 +20,3 @@ def first_non_repeating_char(s):
 input_string = "swiss"
 output_char = first_non_repeating_char(input_string)
 print(output_char)
-
