@@ -3,6 +3,7 @@
 
 num = input("Enter a number: ")
 arr = num.split(".")
+print(arr)
 
 isNum = True
 for i in arr:
