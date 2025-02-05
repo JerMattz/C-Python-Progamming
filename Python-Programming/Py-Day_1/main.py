@@ -103,30 +103,84 @@
 # OOPS
 # Classes
 # self -> constructor
-class student: # class
-    def __init__(self, name, rollno):
-        self.name = name
-        self.rollno = rollno
-
-    def action(self):
-        return "Studying"
-
-
-std1 = student("Jerem", 56) # object creation
-print(std1.name, std1.rollno)
-print(std1.action())
+# class student: # class
+#     def __init__(self, name, rollno):
+#         self.name = name
+#         self.rollno = rollno
+#
+#     def action(self):
+#         return "Studying"
+#
+#
+# std1 = student("Jerem", 56) # object creation
+# print(std1.name, std1.rollno)
+# print(std1.action())
 
 
 # ENCAPSULATION
-class student2:
-    def __init__(self, name, rollno):
-        self.__name = name # private
-        self.__rollno = rollno # private
+# class student2:
+#     def __init__(self, name, rollno):
+#         self.__name = name # private
+#         self.__rollno = rollno # private
+#
+#     def action(self):
+#         return f"student name :{self.__name} studies"
+#
+# std2 = student2("Mathew", 56)
+# print(std2._student2__name, std2._student2__rollno)
+# # print(std2.__dir__())
+# print(std2.action())
 
-    def action(self):
-        return f"student name :{self.__name} studies"
+#Problem 1
+# class Car:
+#     def __init__(self, make: str, model: str, year: int, speed: float = 0.0):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.speed = speed
+#
+#     def accelerate(self, speed_increase: float):
+#         self.speed += speed_increase
+#
+#     def brake(self, speed_decrease: float):
+#         self.speed = max(0.0, self.speed - speed_decrease)
+#
+#     def display_speed(self):
+#         print(f"Current speed: {self.speed} km/h")
+#
+#
+# car = Car("Toyota", "Corolla", 2022)
+# car.accelerate(30)
+# car.display_speed()
+# car.brake(10)
+# car.display_speed()
+# car.brake(25)
+# car.display_speed()
 
-std2 = student2("Mathew", 56)
-print(std2._student2__name, std2._student2__rollno)
-# print(std2.__dir__())
-print(std2.action())
+
+# Problem 2
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):  # template for animals
+    @abstractmethod
+    def make_sound(self) -> str:
+        pass
+
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof")
+
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
+
+
+# Creating objects
+dog = Dog()
+cat = Cat()
+
+dog.make_sound()
+cat.make_sound()
