@@ -3,7 +3,7 @@ class Dog():  # Class -> Dog
 
     # Gets called everytime a new object is created
     def __init__(self, name, age):
-        self.name = name  # Attribute of the class
+        self.name = name  # Attribute of the class - uses "self"
         self.age = age
         # print(name)
 
@@ -38,6 +38,7 @@ class Student:
     def get_grade(self):
         return self.grade
 
+
 class Course:
     def __init__(self, name, max_students):
         self.name = name
@@ -70,5 +71,18 @@ course.add_student(s3)  # False
 print(course.get_average_grade())
 
 
+# Class attributes & methods
+class Person:
+    no_of_people = 0  # class attribute
+
+    def __init__(self, name):
+        self.name = name
+        Person.no_of_people += 1
+
+
+p1 = Person("Tim")
+print(Person.no_of_people)
+p2 = Person("Bill")
+print(Person.no_of_people)
 
 
